@@ -1,0 +1,83 @@
+<div class="marquee-container">
+  <div class="marquee-track">
+    <span class="marquee-text">{{ section.settings.text }}</span>
+    <span class="marquee-text">{{ section.settings.text }}</span>
+    <span class="marquee-text">{{ section.settings.text }}</span>
+    <span class="marquee-text">{{ section.settings.text }}</span>
+  </div>
+</div>
+
+<style>
+  .marquee-container {
+    overflow: hidden;
+    background: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 12px 0;
+    font-size: {{ section.settings.font_size }}px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee {{ section.settings.speed }}s linear infinite;
+  }
+  .marquee-text {
+    padding: 0 3rem;
+    white-space: nowrap;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Marquee Ticker",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "default": "FREE SHIPPING ON ORDERS OVER $50 • NEW ARRIVALS EVERY WEEK •",
+      "label": "Ticker Text"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 20,
+      "label": "Scroll Speed (seconds)"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 14,
+      "label": "Font Size (px)"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "default": "#1a1a1a",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#ffffff",
+      "label": "Text Color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee Ticker"
+    }
+  ]
+}
+{% endschema %}

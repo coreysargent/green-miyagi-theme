@@ -1,0 +1,25 @@
+{
+    "sections": {
+        "marquee": {
+            "type": "marquee",
+            "settings": {
+                "text": "AMERICA IS COOKED • SHOP NOW • FREE VIBES •",
+                "speed": 20,
+                "bg_color": "#1a1a1a",
+                "text_color": "#ffffff"
+            }
+        },
+        "product_grid": {
+            "type": "product-grid",
+            "settings": {
+                "heading": "",
+                "products_per_page": 12,
+                "bg_color": "#ffffff"
+            }
+        }
+    },
+    "order": [
+        "marquee",
+        "product_grid"
+    ]
+}

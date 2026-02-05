@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Colors",
+        "settings": [
+            {
+                "type": "color",
+                "id": "colors_background_1",
+                "default": "#0f0f0f",
+                "label": "Background 1"
+            },
+            {
+                "type": "color",
+                "id": "colors_text",
+                "default": "#ffffff",
+                "label": "Text"
+            },
+            {
+                "type": "color",
+                "id": "colors_accent_1",
+                "default": "#00ff88",
+                "label": "Accent 1 (Green)"
+            }
+        ]
+    },
+    {
+        "name": "Typography",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Headings"
+            }
+        ]
+    }
+]

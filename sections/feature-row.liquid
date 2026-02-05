@@ -1,0 +1,102 @@
+<div class="feature-row section-padding" style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
+  <div class="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="feature-image">
+      {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | image_url: width: 800 }}" 
+             alt="{{ section.settings.image.alt | escape }}" 
+             loading="lazy" 
+             width="{{ section.settings.image.width }}" 
+             height="{{ section.settings.image.height }}"
+             class="w-full h-auto rounded-lg shadow-lg">
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'w-full h-auto rounded-lg shadow-lg bg-gray-200' }}
+      {% endif %}
+    </div>
+    <div class="feature-content text-{{ section.settings.align_text }}">
+      {% if section.settings.heading != blank %}
+        <h2 class="h2 mb-4">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="rte mb-6">{{ section.settings.text }}</div>
+      {% endif %}
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="btn btn-primary">
+          {{ section.settings.button_label }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Feature Row",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Featured Product",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Highlight a specific product or feature here.</p>",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Buy Now",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "align_text",
+      "label": "Text Alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#f4f4f5"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#1a1a1a"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Row"
+    }
+  ]
+}
+{% endschema %}

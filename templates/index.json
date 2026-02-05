@@ -1,0 +1,27 @@
+{
+    "sections": {
+        "hero": {
+            "type": "main-hero",
+            "settings": {
+                "heading": "Green Miyagi",
+                "subheading": "Experience the future of commerce.",
+                "button_label": "Explore Collection",
+                "button_link": "shopify:\/\/collections\/all"
+            }
+        },
+        "feature_row": {
+            "type": "feature-row",
+            "settings": {
+                "heading": "Premium Quality",
+                "text": "<p>Experience the finest materials and craftsmanship.</p>",
+                "button_label": "Shop Now",
+                "button_link": "shopify:\/\/collections\/all",
+                "bg_color": "#f4f4f5"
+            }
+        }
+    },
+    "order": [
+        "hero",
+        "feature_row"
+    ]
+}
