@@ -1,27 +1,32 @@
 {
     "sections": {
         "hero": {
-            "type": "main-hero",
+            "type": "main_hero",
             "settings": {
-                "heading": "Green Miyagi",
-                "subheading": "Experience the future of commerce.",
-                "button_label": "Explore Collection",
+                "heading": "green miyagi",
+                "subheading": "experience the future of commerce.",
+                "button_label": "explore collection",
                 "button_link": "shopify:\/\/collections\/all"
             }
         },
         "feature_row": {
-            "type": "feature-row",
+            "type": "feature_row",
             "settings": {
-                "heading": "Premium Quality",
-                "text": "<p>Experience the finest materials and craftsmanship.</p>",
-                "button_label": "Shop Now",
+                "heading": "premium quality",
+                "text": "<p>experience the finest materials and craftsmanship.</p>",
+                "button_label": "shop now",
                 "button_link": "shopify:\/\/collections\/all",
                 "bg_color": "#f4f4f5"
             }
+        },
+        "swarm": {
+            "type": "swarm_status",
+            "settings": {}
         }
     },
     "order": [
         "hero",
-        "feature_row"
+        "feature_row",
+        "swarm"
     ]
 }

@@ -1,16 +1,22 @@
-<div class="hero relative">
-  <div class="hero-content container">
-    <div class="glass-panel">
-      <h1>{{ section.settings.heading }}</h1>
-      <p>{{ section.settings.subheading }}</p>
+<div class="hero-v2 relative" style="background-image: url('{{ 'hero-bg.png' | asset_url }}');">
+  <div class="hero-v2-content container reveal active" style="opacity: 1; transform: none;">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.subheading }}</p>
+    <div class="flex justify-center" style="gap: 1.5rem;">
       {% if section.settings.button_link != blank %}
-        <a href="{{ section.settings.button_link }}" class="btn">
+        <a href="{{ section.settings.button_link }}" class="btn-premium">
           {{ section.settings.button_label }}
         </a>
       {% endif %}
+      <a href="/collections/all" class="btn-premium outline">
+        view collection
+      </a>
     </div>
   </div>
 </div>
+
+
+
 
 {% schema %}
 {

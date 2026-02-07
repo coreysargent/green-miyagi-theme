@@ -1,33 +1,33 @@
 [
     {
-        "name": "Colors",
+        "name": "colors",
         "settings": [
             {
                 "type": "color",
                 "id": "colors_background_1",
                 "default": "#0f0f0f",
-                "label": "Background 1"
+                "label": "background 1"
             },
             {
                 "type": "color",
                 "id": "colors_text",
                 "default": "#ffffff",
-                "label": "Text"
+                "label": "text"
             },
             {
                 "type": "color",
                 "id": "colors_accent_1",
                 "default": "#00ff88",
-                "label": "Accent 1 (Green)"
+                "label": "accent 1 (green)"
             }
         ]
     },
     {
-        "name": "Typography",
+        "name": "typography",
         "settings": [
             {
                 "type": "header",
-                "content": "Headings"
+                "content": "headings"
             }
         ]
     }

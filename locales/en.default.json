@@ -1,7 +1,7 @@
 {
     "general": {
         "password_page": {
-            "login_password_button": "Enter using password"
+            "login_password_button": "enter using password"
         }
     }
 }

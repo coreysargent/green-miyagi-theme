@@ -1,0 +1,27 @@
+<footer class="section-padding" style="background: #000; border-top: 1px solid var(--color-border);">
+  <div class="container">
+    <div class="flex flex-col items-center text-center">
+      <h2 style="font-size: 3rem; margin-bottom: 2rem; color: var(--color-accent);">miyagi</h2>
+      <p style="color: rgba(255,255,255,0.4); max-width: 400px; margin-bottom: 4rem;">
+        premium aesthetics for the modern web. designed in the void.
+      </p>
+      
+      <div class="flex justify-center" style="gap: 2rem; margin-bottom: 4rem;">
+        {% for link in linklists.footer.links %}
+          <a href="{{ link.url }}" class="nav-link" style="margin: 0;">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+
+      <p style="font-size: 0.7rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.2);">
+        &copy; {{ 'now' | date: "%Y" }} green miyagi. all rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

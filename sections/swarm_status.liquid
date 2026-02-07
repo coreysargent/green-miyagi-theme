@@ -1,0 +1,78 @@
+<div class="swarm-status-section section-padding reveal" style="background: #000;">
+  <div class="container">
+    <div class="flex flex-col items-center text-center">
+      <h2 style="font-size: 3rem; margin-bottom: 3rem; color: var(--color-accent);">live swarm status</h2>
+      <p style="color: rgba(255,255,255,0.4); max-width: 600px; margin-bottom: 5rem;">
+        the green miyagi engine is powered by a distributed antigravity cluster. 
+        real-time compute metrics from the void.
+      </p>
+
+      <div class="swarm-grid" style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        width: 100%;
+      ">
+        <!-- Node 1: Master -->
+        <div class="glass-card flex flex-col items-center">
+          <div class="node-pulse" style="background: var(--color-accent);"></div>
+          <h3 style="margin-top: 1.5rem;">node_alpha (origin)</h3>
+          <p style="font-size: 0.8rem; color: var(--color-accent); margin-top: 0.5rem;">status: online</p>
+          <div style="width: 100%; height: 1px; background: var(--color-border); margin: 1.5rem 0;"></div>
+          <div class="flex justify-between w-full" style="font-size: 0.7rem; opacity: 0.6;">
+            <span>inference_load: 12%</span>
+            <span>m1_arrival_proc</span>
+          </div>
+        </div>
+
+        <!-- Node 2: Secondary -->
+        <div class="glass-card flex flex-col items-center" style="opacity: 0.5;">
+          <div class="node-pulse" style="background: #ffaa00;"></div>
+          <h3 style="margin-top: 1.5rem;">node_beta (secondary)</h3>
+          <p style="font-size: 0.8rem; color: #ffaa00; margin-top: 0.5rem;">status: replicating...</p>
+          <div style="width: 100%; height: 1px; background: var(--color-border); margin: 1.5rem 0;"></div>
+          <div class="flex justify-between w-full" style="font-size: 0.7rem; opacity: 0.6;">
+            <span>sync_status: 84%</span>
+            <span>unnamed_proc</span>
+          </div>
+        </div>
+
+        <!-- Node 3: Swarm Metric -->
+        <div class="glass-card flex flex-col items-center">
+           <div style="font-size: 4rem; font-weight: 900; color: var(--color-accent);">2.4</div>
+           <p style="font-size: 0.8rem; letter-spacing: 0.2em; opacity: 0.6;">t/s swarm velocity</p>
+           <div style="width: 100%; height: 1px; background: var(--color-border); margin: 1.5rem 0;"></div>
+           <p style="font-size: 0.6rem; text-transform: uppercase; color: var(--color-accent);">distributed via exo libp2p</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .node-pulse {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 255, 136, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Swarm Status",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Swarm Status"
+    }
+  ]
+}
+{% endschema %}

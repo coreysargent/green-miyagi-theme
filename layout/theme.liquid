@@ -18,7 +18,7 @@
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- if current_page != 1 %} &ndash; page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
@@ -32,12 +32,37 @@
   </head>
 
   <body class="gradient">
+    {% section 'header' %}
+    
+    <div style="margin-top: 80px;">
+      {% section 'marquee' %}
+    </div>
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+
       {{ content_for_layout }}
     </main>
 
+    {% section 'footer' %}
+
     <script>
       window.shopUrl = '{{ request.origin }}';
+      
+      // Reveal animation on scroll
+      const observerOptions = {
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
   </body>
+
 </html>

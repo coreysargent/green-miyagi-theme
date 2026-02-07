@@ -3,14 +3,14 @@
         "marquee": {
             "type": "marquee",
             "settings": {
-                "text": "AMERICA IS COOKED • SHOP NOW • FREE VIBES •",
+                "text": "america is cooked • shop now • free vibes •",
                 "speed": 20,
                 "bg_color": "#1a1a1a",
                 "text_color": "#ffffff"
             }
         },
         "product_grid": {
-            "type": "product-grid",
+            "type": "product_grid",
             "settings": {
                 "heading": "",
                 "products_per_page": 12,
